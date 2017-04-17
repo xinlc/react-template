@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+$colorfff:#fff;
+$gap:5px;
+
+// html {
+//     font-size: 125%;   /* 基数设置为 20px, 20 / 16 = 1.25 */
+// }
+
+@media only screen and (min-width: 481px){
+    // html {
+    //     font-size: 156% !important;
+    // }
+}
+@media only screen and (min-width: 561px){
+    // html {
+    //     font-size: 172% !important;
+    // }
+}
+@media only screen and (min-width: 641px){
+    // html {
+    //     font-size: 188% !important;
+    // }
+}
+:global(*) {
+    // 开启后ios 不能输入
+    // -webkit-touch-callout: none; /* iOS Safari */
+    // -webkit-user-select: none; /* Chrome/Safari/Opera */
+    // -khtml-user-select: none; /* Konqueror */
+    // -moz-user-select: none; /* Firefox */
+    // -ms-user-select: none; /* Internet Explorer/Edge */
+    // user-select: none;
+
+    -webkit-touch-callout: none; /* 禁止长按淡出浏览器菜单*/
+}
+
+:global(html) {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;   
+}
+:global(body) {
+    height: 100%;
+    width: 100%;
+    color: #313131;
+    overflow: hidden;
+}
+:global(#app) {
+    height: 100%;
+    width: 100%;
+}
+:global(.mt5) {
+    margin-top: $gap;
+}
+:global(.mt10) {
+    margin-top: $gap*2;
+}
+:global(.mb5) {
+    margin-bottom: $gap;
+}
+:global(.mb10) {
+    margin-bottom: $gap*2;
+}
+
+:global(.clear) {
+    zoom: 1;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+:global(.display-flex) {
+    display: -moz-box;
+    /* Firefox */
+    display: -ms-flexbox;
+    /* IE10 */
+    display: -webkit-box;
+    /* Safari */
+    display: -webkit-flex;
+    /* Chrome, WebKit */
+    display: flexbox;
+    display: flex;
+}
+
+:global(.break) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+:global(.user-avatar) {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #F3F3F3;
+}
+
+:global(.navBar.am-navbar) {
+  background-color: #333;
+}
+
+:global(.listView) {
+    overflow: auto;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+:global(.noselect) {
+    // 开启后ios 不能输入
+    // -webkit-touch-callout: none; /* iOS Safari */
+    // -webkit-user-select: none; /* Chrome/Safari/Opera */
+    // -khtml-user-select: none; /* Konqueror */
+    // -moz-user-select: none; /* Firefox */
+    // -ms-user-select: none; /* Internet Explorer/Edge */
+    // user-select: none;
+}
+
+
+
+// ========antd-mobile===========
+:global(.am-toast-text-info),:global(.am-toast-text) {
+    color: #fff !important;
+    font-size: 32px;
+}

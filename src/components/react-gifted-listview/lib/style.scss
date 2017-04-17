@@ -1,0 +1,13 @@
+.listview {
+  & > :global(.am-list) {
+    left: 0;
+    right: 0;
+  }
+
+  :global(.am-list-footer) {
+    padding: 0px;
+  }
+}
+.noheader :global(.am-list-header) {
+  display: none;
+}
