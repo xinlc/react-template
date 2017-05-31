@@ -7,6 +7,7 @@
  * fireEvent
  * removeEvent
  * Created by lichao on 17/03/30.
+ * 主要用于框架内组件和第三方组件库进行信息传递。
  */
 
 // Polyfill CustomEvent

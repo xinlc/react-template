@@ -24,11 +24,7 @@ class Root extends Component {
 
 /* eslint-disable */
 const AUTHURL = {
-  '/postProd': 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx260d7f7109791ba1&redirect_uri=https://www.cyqapp.com/wx2/auth&response_type=code&scope=snsapi_userinfo&state=postProd#wechat_redirect',
-  '/shop/myprods': 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx260d7f7109791ba1&redirect_uri=https://www.cyqapp.com/wx2/auth&response_type=code&scope=snsapi_userinfo&state=shop_myprods#wechat_redirect',
-  '/shop/favorites': 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx260d7f7109791ba1&redirect_uri=https://www.cyqapp.com/wx2/auth&response_type=code&scope=snsapi_userinfo&state=shop_favorites#wechat_redirect',
-  '/changePhone': 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx260d7f7109791ba1&redirect_uri=https://www.cyqapp.com/wx2/auth&response_type=code&scope=snsapi_userinfo&state=changePhone#wechat_redirect',
-  '/shop/detail': 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx260d7f7109791ba1&redirect_uri=https://www.cyqapp.com/wx2/auth&response_type=code&scope=snsapi_userinfo&state=$foward#wechat_redirect',
+  '/shop/detail': 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=$API_KEY&redirect_uri=https://YOUR.DOMAIN.COM/wx2/auth&response_type=code&scope=snsapi_userinfo&state=$foward#wechat_redirect',
 }
 /* eslint-enable */
 
@@ -65,44 +61,8 @@ export const ACL = (nextState, replace, callback) => {
   }
 };
 
-// // 按需加载
-// // require.ensure 是 Webpack 的特殊语法，用来设置 code-split point
-
-// const loginComp = (nextState, cb) => {
-//   require.ensure([], (require) => {
-//     cb(null, require('../views/auth/login').default);
-//   });
-// };
-
-// const SMSLoginComp = (nextState, cb) => {
-//   require.ensure([], (require) => {
-//     cb(null, require('../views/auth/smsLogin').default);
-//   });
-// };
-
-// const forgetPasswordComp = (nextState, cb) => {
-//   require.ensure([], (require) => {
-//     cb(null, require('../views/auth/forgetPassword').default);
-//   });
-// };
-
-// const resetPasswordComp = (nextState, cb) => {
-//   require.ensure([], (require) => {
-//     cb(null, require('../views/auth/resetPassword').default);
-//   });
-// };
-
-// const changePhoneComp = (nextState, cb) => {
-//   require.ensure([], (require) => {
-//     cb(null, require('../views/auth/changePhone').default);
-//   });
-// };
-
-
 const history = process.env.NODE_ENV !== 'production' ? browserHistory : hashHistory;
-// const history = hashHistory;
-// exact
-// <Route path="shop/details/:itemId" component={AtomDetails} onEnter={requireAuth} />
+
 const routes = (
   <Router history={history}>
     <Route path="/" component={Root}>

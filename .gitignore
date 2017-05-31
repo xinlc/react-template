@@ -36,3 +36,7 @@ bower_components/
 
 .DS_Store
 dist/
+
+# Yarn
+yarn-error.log
+yarn.lock

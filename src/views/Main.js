@@ -1,7 +1,7 @@
 import Styles from 'styles/main.scss';
 import React from 'react';
 import { Link } from 'react-router';
-import { Button } from 'antd-mobile';
+import { Flex, WhiteSpace, WingBlank } from 'antd-mobile';
 import { connect } from 'react-redux';
 
 class AppComponent extends React.Component {
@@ -27,10 +27,17 @@ class AppComponent extends React.Component {
   // </div>
   render() {
     return (
-      <div className={Styles.index}>
-        <Button onClick={() => this._handleClick()} size="small" inline type="primary">戳我</Button>
-        <Link to="shop">点击link</Link>
-      </div>
+      <WingBlank>
+        <Flex direction="column">
+          <Flex.Item>
+           请使用手机模拟模式打开
+            </Flex.Item>
+          <WhiteSpace />
+          <Flex.Item>
+            React + Redux + Saga template
+            </Flex.Item>
+        </Flex>
+      </WingBlank>
     );
   }
 }

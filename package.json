@@ -1,7 +1,7 @@
 {
   "private": true,
   "version": "0.0.1",
-  "description": "react-template",
+  "description": "react-template, this is a template for react + redux + saga architecture",
   "main": "",
   "scripts": {
     "clean": "rimraf dist/*",
@@ -20,8 +20,10 @@
   },
   "repository": "",
   "keywords": [
-    "餐饮帮",
-    "餐饮圈"
+    "react",
+    "redux",
+    "redux-saga",
+    "antd"
   ],
   "author": "BBKJ",
   "devDependencies": {
@@ -89,6 +91,7 @@
     "react-router": "^3.0.0",
     "redux": "^3.6.0",
     "redux-saga": "^0.14.3",
+    "validator": "^7.0.0",
     "whatwg-fetch": "^2.0.3"
   },
   "theme": "./src/assets/styles/theme.js"
