@@ -63,7 +63,7 @@
     "karma-webpack": "^1.7.0",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.2",
     "mocha": "^3.0.0",
     "node-sass": "^4.5.2",
     "null-loader": "^0.1.1",
